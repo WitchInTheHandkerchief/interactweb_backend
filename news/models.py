@@ -5,7 +5,7 @@ from django.utils.translation import gettext_lazy as _
 class News(models.Model):
     title = models.CharField(_("Заголовок"), max_length=512)
     date = models.DateField(_("Дата"), auto_now_add=True)
-    preview_url = models.URLField(_("Картинка"), null=True, blank=True, max_length=256)
+    image = models.ImageField(_("Картинка"), null=True, blank=True)
     content = models.TextField(_("Текст"))
 
     class Meta:
